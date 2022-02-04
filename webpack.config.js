@@ -11,7 +11,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.(js|jsx)/,
-				exclude: /(node_modules)/,
+				exclude: /node_modules/,
 				use: {
 					loader: "babel-loader",
 					options: { presets: ["@babel/env", "@babel/preset-react"] },
@@ -35,4 +35,8 @@ module.exports = {
 			filename: "index.html",
 		}),
 	],
+	performance: {
+		// maxAssetSize: 1000000,
+		hints: false,
+	},
 };
